@@ -20,7 +20,8 @@
 
 // Get the users guess
     document.addEventListener("keypress", (event) => {
-        var keyWord = String.fromCharCode(event.keycode);
+        var keyCode = event.keyCode;
+        var keyWord = String.fromCharCode(keyCode);
         console.log(keyWord);
     })
     
