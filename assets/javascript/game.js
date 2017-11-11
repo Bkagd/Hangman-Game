@@ -10,6 +10,8 @@
 
     console.log(chosenWord);
 
+    
+
 // Create underscores based on length of chosen word
     var generateUnderscore = () => {
         for(var i = 0; i < chosenWord.length; i++) {
@@ -33,6 +35,7 @@ function placeScore() {
             rightWord.push(keyWord);
             underScore[chosenWord.indexOf(keyWord)] = keyWord;
             console.log(underScore);
+            $(".underscore").text(underScore.join(" "));
             if (underScore.join("") == chosenWord) {
                 alert("You are the champ!");
             }
