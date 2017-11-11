@@ -33,6 +33,7 @@ function placeScore() {
 // if guess is right
         if (chosenWord.indexOf(keyWord) > -1) {
             rightWord.push(keyWord);
+            $(".rightGuess").text(rightWord.join(""));
             underScore[chosenWord.indexOf(keyWord)] = keyWord;
             console.log(underScore);
             $(".underscore").text(underScore.join(" "));
@@ -41,6 +42,8 @@ function placeScore() {
             }
         } else {
             wrongWord.push(keyWord);
+            $(".wrongGuess").text(wrongWord.join(""));
+            
             console.log(wrongWord);
             
         }
